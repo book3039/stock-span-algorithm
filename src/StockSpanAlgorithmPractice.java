@@ -17,12 +17,12 @@ public class StockSpanAlgorithmPractice {
         spansWithStack = new int[DATA_COUNT];
 
         startTime = System.nanoTime();
-        getSpanWithArray();
+        calculateSpanWithArray();
         endTime = System.nanoTime();
         double arrayTime = (endTime - startTime) / 1_000_000_000.0;
 
         startTime = System.nanoTime();
-        getSpanWithStack();
+        calculateSpanWithStack();
         endTime = System.nanoTime();
         double stackTime = (endTime - startTime) / 1_000_000_000.0;
 
@@ -45,7 +45,7 @@ public class StockSpanAlgorithmPractice {
         System.out.println("getSpanWithStack duration: " + stackTime + " s");
     }
 
-    private static void getSpanWithArray() {
+    private static void calculateSpanWithArray() {
         int k;
         boolean spanEnd;
 
@@ -64,7 +64,7 @@ public class StockSpanAlgorithmPractice {
     }
 
 
-    private static void getSpanWithStack() {
+    private static void calculateSpanWithStack() {
 
         MyStack stack = new MyStack();
 
